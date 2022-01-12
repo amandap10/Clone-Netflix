@@ -1,22 +1,23 @@
-import React, { useEffect } from 'react';
+import React , { useEffect, useSate } from 'react';
 import Tmdb from '../Tmdb/index.js';
 
-function Home() {
+export default () => {
+
+    const [ movieList, setMovieList ] = useSate([]);
+
 
     useEffect(() => {
-        const loadAll = async () =>{
+        const loadAll = async () => {
             const list = await Tmdb.homeList();
-            console.log(list);
+            setMovieList(list);
         }
 
         loadAll();
     }, []);
 
     return (
-        <div>
-            <h1>Olá mundo!</h1>
+        <div className='page'>
+            
         </div>
-    )
+    );
 }
-
-export default Home;

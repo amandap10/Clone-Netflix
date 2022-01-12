@@ -11,6 +11,8 @@ const API_BASE = 'https://api.themoviedb.org/3';
 -romance
 -documentários
 */
+
+
 const basicFetch = async(endpoint) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
@@ -18,7 +20,7 @@ const basicFetch = async(endpoint) => {
 }
 
 export default { 
-    homeList: async () => {
+    homeList: async() => {
         return[
             {
                 slug: 'originals',
