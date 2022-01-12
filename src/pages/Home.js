@@ -1,9 +1,10 @@
-import React , { useEffect, useSate } from 'react';
+import React , { useEffect, useState } from 'react';
 import Tmdb from '../Tmdb/index.js';
+import ListMovie from '../Components/MovieRow/ListMovie';
 
-export default () => {
+function Home() {
 
-    const [ movieList, setMovieList ] = useSate([]);
+    const [ movieList, setMovieList ] = useState([]);
 
 
     useEffect(() => {
@@ -17,7 +18,13 @@ export default () => {
 
     return (
         <div className='page'>
-            
+            <section className='lists'>
+                {movieList.map((item, key) => (
+                    <ListMovie key={key}/>
+                ))}
+            </section>
         </div>
     );
 }
+
+export default Home();
