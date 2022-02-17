@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.css';
 
-function featuread () {
+function featuread ({item}) {
     return (
-        <div>
-            
-        </div>
+       <section>
+           <div>{item.original_name}</div>
+       </section>
     )
 }
 
