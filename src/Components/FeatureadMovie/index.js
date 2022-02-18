@@ -4,6 +4,10 @@ import './index.css';
 function featuread ({item}) {
 
     const firstDate = new Date(item.first_air_date);
+    const genres = [];
+    for(let i in item.genres) {
+        genres.push( item.genres[i].name );
+    }
 
     return (
        <section className="featured" style={{
@@ -16,9 +20,9 @@ function featuread ({item}) {
                    </div>
                    <div className="featured-info">
                        <div className="featured-points">
-                           {item.vote_average}
+                           {item.vote_average} pontos
                        </div>
-                       <div className="featured-yar">
+                       <div className="featured-year">
                            {firstDate.getFullYear()}
                        </div>
                        <div className="featured-seasons">
@@ -30,10 +34,11 @@ function featuread ({item}) {
                        {item.overview}
                    </div>
                    <div className="featured-buttons">
-
+                        <a href="" className="featured-watch">Assistir</a>
+                        <a href="" className="featured-mylist"> + Minha Lista</a>
                    </div>
                    <div className="featured-genres">
-                       <strong>Gêneros</strong> ...
+                       <strong>Gêneros</strong> {genres.join(', ')}
                    </div>
                </div>
             </div>
