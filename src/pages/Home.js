@@ -4,11 +4,13 @@ import Tmdb from '../Tmdb/index.js';
 import "../App.css";
 import ListMovie from '../Components/MovieRow/ListMovie.js';
 import Featuread from '../Components/FeatureadMovie/index.js';
+import Header from '../Components/Header/index.js';
 
 function Home() {
 
     const [ movieList, setMovieList ] = useState([]);
     const [ featureadData, setFeatureadData ] = useState(null);
+    const [ blackHeader, setBlackHeader ] = useState(false);
 
     useEffect(() => {
         const loadAll = async () => {
@@ -26,8 +28,26 @@ function Home() {
         loadAll();
     }, []);
 
+    useEffect(() => {
+        const scrollListener = () => {
+            if(window.scrollY > 10) {
+                setBlackHeader(true);
+            } else {
+                setBlackHeader(false);
+            }
+        }
+
+        window.addEventListener('scroll', scrollListener);
+        
+        return() => {
+            window.removeEventListener('scroll', scrollListener);
+        }
+    }, []);
+
     return (
         <div className='page'>
+
+            <Header black={blackHeader} />
 
             { featureadData &&
                 <Featuread item={featureadData} />
@@ -38,6 +58,10 @@ function Home() {
                     <ListMovie key={key} title={item.title} items={item.items}/>
                 ))}
             </section>
+
+            <footer>
+                
+            </footer>
         </div>
     );
 }
