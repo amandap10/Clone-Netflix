@@ -30,3 +30,11 @@ header.black {
     height: 100%;
     border-radius: 3px;
 }
+@media (max-width: 760px) {
+    .logo {
+        height: 75px;
+    }
+    .user img {
+        height: 34px;
+    }
+}

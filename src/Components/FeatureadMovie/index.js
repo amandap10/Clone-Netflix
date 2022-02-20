@@ -9,6 +9,11 @@ function featuread ({item}) {
         genres.push( item.genres[i].name );
     }
 
+    const description = item.overview;
+    if(description.length > 200) {
+        description = description.substring(0, 200) + '...';
+    }
+
     return (
        <section className="featured" style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
@@ -31,7 +36,7 @@ function featuread ({item}) {
                        </div>
                    </div>
                    <div className="featured-description">
-                       {item.overview}
+                       {description}
                    </div>
                    <div className="featured-buttons">
                         <a href="" className="featured-watch">Assistir</a>

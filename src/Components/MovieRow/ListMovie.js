@@ -19,7 +19,7 @@ export default ({title, items}) => {
         let listW = items.results.length * 150;
         if((window.innerWidth - listW) > x ) {
             x = (window.innerWidth - listW) - 60;
-        }
+        }               
         setScrollX(x);
     }
 

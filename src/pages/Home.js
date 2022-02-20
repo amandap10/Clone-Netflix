@@ -17,13 +17,13 @@ function Home() {
     useEffect(() => {
         const loadAll = async () => {
             const list = await Tmdb.homeList();
-            //setMovieList(list);
+            setMovieList(list);
 
             const originals = list.filter(i=>i.slug === 'originals');
             const randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
             const chosen = originals[0].items.results[randomChosen];
             const chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-            //setFeatureadData(chosenInfo);
+            setFeatureadData(chosenInfo);
 
         }
 
@@ -66,9 +66,11 @@ function Home() {
                 Dados pegos do site Themoviedb.org
             </footer>
 
-            <div className="loading">
-                <img src={Gif} alt="loading" />
-            </div>
+            {movieList.length <= 0 && 
+                <div className="loading">
+                    <img src={Gif} alt="loading" />
+                </div>
+            }
         </div>
     );
 }
