@@ -2,7 +2,7 @@
 
 O projeto Clone-Netflix foi realizado a partir de um tutorial do Youtube.
 A partir do mesmo códigto, refatorei e organizei em pastas e componentes conforme já tinha conhecimento de outros cursos,
-utilizando API do site Tmdb e fazendo com que seja funcional a interface da aplicação !
+utilizando API do site Tmdb e fazendo com que seja funcional a interface da aplicação, e também com um layout responsivo !
 
 ### Imagens e créditos autorais - Netflix.
 ### Consumo de API Tmdb.
