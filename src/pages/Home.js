@@ -5,6 +5,8 @@ import "../App.css";
 import ListMovie from '../Components/MovieRow/ListMovie.js';
 import Featuread from '../Components/FeatureadMovie/index.js';
 import Header from '../Components/Header/index.js';
+import Gif from './Gif/gif.gif';
+
 
 function Home() {
 
@@ -15,13 +17,13 @@ function Home() {
     useEffect(() => {
         const loadAll = async () => {
             const list = await Tmdb.homeList();
-            setMovieList(list);
+            //setMovieList(list);
 
             const originals = list.filter(i=>i.slug === 'originals');
             const randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
             const chosen = originals[0].items.results[randomChosen];
             const chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-            setFeatureadData(chosenInfo);
+            //setFeatureadData(chosenInfo);
 
         }
 
@@ -63,6 +65,10 @@ function Home() {
                 Direitos de imagem para Netflix <br />
                 Dados pegos do site Themoviedb.org
             </footer>
+
+            <div className="loading">
+                <img src={Gif} alt="loading" />
+            </div>
         </div>
     );
 }
