@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.logo__netflix img {
+    margin-top: -15px;
+    margin-left: 30px;
+    height: 130px;
+    width: 200px;
+    position: absolute;
+}
+
+.imagem-fundo > img {
+    position: fixed;
+}
+
+.logo-initial {
+    height: 100%;
+    width: 100%;
+    background: rgba(3, 3, 3, 0.438);
+    position: absolute;
+}
+section {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.interface__login {
+    background: rgba(3, 3, 3, 0.815);
+    height: 660px;
+    width: 450px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.interface__login h1 {
+    display: flex;
+    position: absolute;
+    margin-top: -450px;
+    margin-left: -220px;
+    margin-bottom: 28px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+form {
+    margin-top: -130px;
+}
+.login {
+    padding: 0px 0px 20px;
+    margin-top: 10px;
+}
+input {
+    height: 50px;
+    width: 314px; 
+    border-radius: 4px;  
+    background: #e8f0fe;
+    border: 0px;
+}
+.label-login {
+    display: flex;
+    justify-content: space-around;
+}
+label,
+span {
+    color: #b3b3b3;
+    font-size: 13px;
+    padding: 2px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    font-size: 1em;
+    font-family: 'Roboto', 'sans-serif';
+    width: 314px;
+    height: 48px;
+    background: #e50914;
+    margin: 24px 0px 12px;
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 700px;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    text-align: center;
+    border: 0px;
+    box-sizing: border-box;
+}
