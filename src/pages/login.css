@@ -5,6 +5,9 @@
     box-sizing: border-box;
     margin: 0;
 }
+header {
+    display: flex;
+}
 .logo__netflix img {
     margin-top: -15px;
     margin-left: 30px;
@@ -18,7 +21,7 @@
 }
 
 .logo-initial {
-    height: 100%;
+    height: 1139px;
     width: 100%;
     background: rgba(3, 3, 3, 0.438);
     position: absolute;
@@ -27,11 +30,10 @@ section {
     justify-content: center;
     text-align: center;
     display: flex;
-    
 }
 
 .interface__login {
-    background: rgba(3, 3, 3, 0.815);
+    background: rgba(3, 3, 3, 0.678);
     height: 660px;
     width: 450px;
     border-radius: 5px;
@@ -54,7 +56,7 @@ section {
     color: #ffffff;
 }
 form {
-    margin-top: -20px;   
+    margin-top: 150px;
 }
 .login {
     padding: 0px 0px 20px;
@@ -70,7 +72,6 @@ input {
 .label-login {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
 }
 .label-login > 
 label,
@@ -102,7 +103,10 @@ span {
 .informations {
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
+    justify-content: left;
+    width: 314px;
+    height: 216px;
+    margin-top: 50px;
 }
 .informations p {
     color: #737373;
@@ -113,5 +117,12 @@ span {
     font-weight: 500;
     color: #737373;
     cursor: pointer;
-    
+}
+
+footer {
+    margin-top: 880px;
+    width: 100%;
+    height: 259px;
+    position: absolute;
+    background: rgba(3, 3, 3, 0.678);
 }

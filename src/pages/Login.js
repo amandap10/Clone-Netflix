@@ -44,12 +44,9 @@ function login() {
                     </div>
                 </div>
             </section>
-            <footer>
+            <footer className="footerOne">
                 <div className="rodape">
                     <p>Duvidas? Ligue 0800-761-4631</p>
-                    <ul>
-                        
-                    </ul>
                 </div>
             </footer>
        </div>
