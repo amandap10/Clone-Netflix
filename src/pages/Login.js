@@ -32,14 +32,23 @@ function login() {
                             <span>Precisa de ajuda?</span>
                         </div>
                     </form>
+                    
+                    <div className="informations">
+                        <div>
+                            <a href="">Conectar com Facebook</a>
+                        </div>
+                        <div>
+                            <p>Novo por aqui?</p><span>Assine agora.</span>
+                        </div>
+
+                    </div>
                 </div>
             </section>
             <footer>
                 <div className="rodape">
                     <p>Duvidas? Ligue 0800-761-4631</p>
                     <ul>
-                        perguntas frequentes centro de ajuda termos de uso privacidade
-                        Preferência de cookies Informações corporativas
+                        
                     </ul>
                 </div>
             </footer>
