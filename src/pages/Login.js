@@ -28,7 +28,8 @@ function login() {
                             <button className="btn" type="button">Entrar</button>
                         </div>
                         <div className="label-login">
-                            <label type="checkbox">Lembre-se de mim</label>
+                            <input type="checkbox" />
+                            <label>Lembre-se de mim</label>
                             <span>Precisa de ajuda?</span>
                         </div>
                     </form>
