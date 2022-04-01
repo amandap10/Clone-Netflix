@@ -140,6 +140,10 @@ span {
     margin-top: 16px;
 }
 
+.info-sign p {
+    margin-right: 5px;
+}
+
 .informations p {
     color: #737373;
     font-size: 16px;

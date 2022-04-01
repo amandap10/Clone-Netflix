@@ -43,7 +43,7 @@ function login() {
                             </a>
                         </div>
                         <div className="info-sign">
-                            <p>Novo por aqui? </p><a href="">Assine agora.</a>
+                            <p>Novo por aqui?</p><a href="">Assine agora.</a>
                         </div>
                         <div className="info_finish">
                             <span>Esta página é protegida pelo Google reCAPTCHA 
