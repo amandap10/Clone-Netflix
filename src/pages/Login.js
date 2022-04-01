@@ -20,10 +20,10 @@ function login() {
                     <h1>Entrar</h1>
                     <form >
                         <div className="login">
-                            <input type="email" />
+                            <input type="email" placeholder="E-mail ou número de telefone"/>
                         </div>
                         <div className="login">
-                            <input type="password" />
+                            <input type="password" placeholder="Senha"/>
                         </div>
                         <div className="btn1">
                             <button className="btn" type="button">Entrar</button>
@@ -56,9 +56,22 @@ function login() {
                 </div>
             </section>
             <footer className="footerOne">
+
                 <div className="rodape">
-                    <p>Duvidas? Ligue 0800-761-4631</p>
-                </div>
+                    <p>Dúvidas? Ligue 0800-761-4631</p>
+
+                    <div className="footer-item1">
+                        <span>Perguntas frequentes</span>
+                        <span>Centro de ajuda</span>
+                        <span>Termos de uso</span>
+                        <span>Privacidade</span>
+                    </div>
+
+                    <div className="footer-item2">
+                        <span>Preferências de cookies</span>
+                        <span>Informações corporativas</span>
+                    </div>
+                </div> 
             </footer>
        </div>
     );
