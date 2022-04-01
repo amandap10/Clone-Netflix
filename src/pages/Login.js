@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../Image/logo.png";
 import "./login.css";
 import Fundo from "../Image/fundo-netflix-login.jpg"
+import Fb from "../Image/fb.png";
 
 function login() {
     return (
@@ -35,11 +36,20 @@ function login() {
                     </form>
                     
                     <div className="informations">
-                        <div>
-                            <a href="">Conectar com Facebook</a>
+                        <div className="info-conect">
+                            <img src={Fb} alt="Logo Netflix" />
+                            <a href="">
+                                Conectar com Facebook
+                            </a>
                         </div>
-                        <div>
-                            <p>Novo por aqui?</p><span>Assine agora.</span>
+                        <div className="info-sign">
+                            <p>Novo por aqui? </p><a href="">Assine agora.</a>
+                        </div>
+                        <div className="info_finish">
+                            <span>Esta página é protegida pelo Google reCAPTCHA 
+                                para garantir que você não é um robô.
+                            </span>
+                            <a href="">Saiba mais.</a>
                         </div>
 
                     </div>
