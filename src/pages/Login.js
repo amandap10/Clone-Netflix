@@ -1,16 +1,31 @@
-import React from "react";
+import { useHistory } from 'react-router-dom';
+
+import { firebase } from '../services/firebase';
+
 import Logo from "../Image/logo.png";
 import "./login.css";
 import Fundo from "../Image/fundo-netflix-login.jpg"
 import Fb from "../Image/fb.png";
 
-function login() {
+export function Login() {
+    const history = useHistory();
+
+    function sigin() {
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        auth.siginInWithPopup(provider).then(result => {
+            console.log();
+        })
+
+       // history.push('/home/new');
+    }
+
     return (
        <div className="imagem-fundo">
            <img src={Fundo} alt="Imagem de fundo" />
             <header className="logo-initial">
                 <div className="logo__netflix">
-                    <a href="/">
+                    <a href="#">
                         <img src={Logo} alt="Logo Netflix" />
                     </a>
                 </div>
@@ -26,7 +41,7 @@ function login() {
                             <input type="password" placeholder="Senha"/>
                         </div>
                         <div className="btn1">
-                            <button className="btn" type="button">Entrar</button>
+                            <button onClick={sigin} className="btn" type="button">Entrar</button>
                         </div>
                         <div className="label-login">
                             <input type="checkbox" />
@@ -76,5 +91,3 @@ function login() {
        </div>
     );
 }
-
-export default login;

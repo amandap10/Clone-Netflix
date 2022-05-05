@@ -8,7 +8,7 @@ import Header from '../Components/Header/index.js';
 import Gif from './Gif/gif.gif';
 
 
-function Home() {
+export function Home() {
 
     const [ movieList, setMovieList ] = useState([]);
     const [ featureadData, setFeatureadData ] = useState(null);
@@ -75,4 +75,3 @@ function Home() {
     );
 }
 
-export default Home;
